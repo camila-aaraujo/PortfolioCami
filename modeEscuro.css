@@ -1,0 +1,13 @@
+:root{
+    --branco: #f8f8f8;
+    --preto: #030814;
+    
+}
+
+.tema-claro{
+    --bg: var(--branco);
+
+}
+.tema-escuro{
+    --bg: var(--preto);
+}

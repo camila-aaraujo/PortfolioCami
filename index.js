@@ -4,7 +4,7 @@ function irParaGithub() { // aqui coloquie o memso nome do onclick que etsá no 
     window.open("https://github.com/camila-aaraujo",); 
 }
 function irParaInsta() {
-    window.open("https://github.com/camila-aaraujo",);
+    window.open("https://www.instagram.com/cami.aaraujo/?next=%2F",);
 }
 function irParaLink() {
     window.open("https://github.com/camila-aaraujo",);
@@ -59,4 +59,6 @@ function mostrarAtividades(containerId, trimestre) {
   trimestresAtivos[containerId] = trimestre;
   container.classList.add('show');
 }
+
+// ----------------------------------tema escuro e claro--------------
 

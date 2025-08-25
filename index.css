@@ -1,5 +1,6 @@
 
 body {
+  
     padding: 0;
     margin:0;
     width: 100%;
@@ -13,6 +14,7 @@ body {
 
 /* -----------------------------CABECALHO-------------------- */
 header{
+  border-top: 10%;
     display: flex;
     /* border: solid; */
     align-items: center;
@@ -22,6 +24,7 @@ header{
 
 /* TAMALHO DO CABEÇALHO */
 .cabecalho{
+  border-top: 10%;
   display: flex;
   width: 60%;
   justify-content: space-between;
@@ -308,3 +311,5 @@ h2{
       font-size: 14px;
     }
   }
+
+ 
