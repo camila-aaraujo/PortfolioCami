@@ -62,3 +62,39 @@ function mostrarAtividades(containerId, trimestre) {
 
 // ----------------------------------tema escuro e claro--------------
 
+// -----------------------emojis---------------------------
+// Array de emojis para o rastro
+const emojis = [ "🌸", "🌻", "🌺"];
+let lastTime = 0; // guarda o tempo do último emoji criado
+const interval = 130; // intervalo mínimo em milissegundos 
+
+document.addEventListener("mousemove", (e) => {
+    const now = Date.now();
+    if (now - lastTime < interval) return; // ainda não passou tempo suficiente
+    lastTime = now;
+
+    // 1. Cria um novo elemento div para o emoji
+    const emojiElement = document.createElement("div");
+    emojiElement.classList.add("emoji-trail");
+
+    // 2. Escolhe um emoji aleatoriamente do array
+    const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+    emojiElement.textContent = randomEmoji;
+
+    // 3. Define a posição do elemento com base nas coordenadas do mouse
+    emojiElement.style.left = e.pageX + "px";
+    emojiElement.style.top = e.pageY + "px";
+
+    // 4. Adiciona o elemento ao corpo do documento
+    document.body.appendChild(emojiElement);
+
+    // 5. Inicia a animação de desaparecimento
+    setTimeout(() => {
+        emojiElement.style.animation = "fadeOut 0.8s forwards";
+        setTimeout(() => {
+            emojiElement.remove();
+        }, 800);
+    }, 50);
+});
+
+

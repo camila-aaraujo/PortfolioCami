@@ -8,11 +8,12 @@ body {
     list-style: none;
     text-decoration: none;
     background-color: #030814;
-
+    /* background-color: aliceblue; */
 }
 
 
-/* -----------------------------CABECALHO-------------------- */
+/* ---------------------------------------------CABECALHO--------------------------------------- */
+
 header{
   border-top: 10%;
     display: flex;
@@ -58,23 +59,24 @@ header{
 } */
 
 
-/* --------------------TITULO---------------- */
+/* -----------------------------------------------TITULO----------------------------------------- */
 .titulo{
     align-items: center;
 }
 
 /* TITULO PRINCIPAL */
 .imgTitulo{ /*titulo principal 'portfolio'*/
-  
-    display: block;
-    margin-left: auto;
-    margin-right: auto; 
-    align-items: center;
-    align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  align-items: center;
+  align-content: center;
+  width: 70%;
+  height: auto;
 } 
 
 
-/* ---------------------------SOBREMIM----------------------- */
+/* ------------------------------------------SOBREMIM--------------------------------- */
 /* DIV DAS REDES SOCIAIS */
 .redesSociais {
     display: flex;
@@ -128,9 +130,12 @@ h2{
 
 
 .lado-direito{
-    /* border: solid 1px yellow; */
-    width: 60%;
-    margin-right: 15px;
+  /* border: solid 1px yellow; */
+  width: 60%;
+  margin-right: 15px;
+}
+.lado-direito p{
+  width: 80%;
 }
 
 .lado-esquerdo{
@@ -152,45 +157,52 @@ h2{
 
 /* CURRICULO */
 .curriculo{
-    font-size: 0%;
-    color: #c8637d;
+  font-size: 0%;
+  color: #c8637d;
 }
 .curriculo img{
-    height: 566px;
-    width: 400px;
-    /* arrumando o tamanho do curriculo */
+  width: 50%;
+  transition: .2s;
+  /* arrumando o tamanho do curriculo */
 }
 
 .imgCurriculo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; 
-    align-items: center;
-    align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  align-items: center;
+  align-content: center;
+}
+
+.curriculo img:hover{
+  transform: scale(1.1, 1.1);
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 /* PORTFOLIOS ANTIGOS */
 .PortfoliosAntigos{
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 .PortfoliosAntigos img {
-    display: flex;
-   justify-content: space-between;
-    height: 282px;
-    width: 500px;
-    padding-bottom: 10%;
-   /* border: solid 1px greenyellow; */
-    transition: .2s;
-}
-
-.PortfoliosAntigos img:houver {
-  transform: scale(1.05);
+  display: flex;
+  justify-content: space-between;
+  height: 282px;
+  width: 500px;
+  padding-bottom: 10%;
+  /* border: solid 1px greenyellow; */
   transition: .2s;
 }
 
+.PortfoliosAntigos img:hover{
+  transform: scale(1.1, 1.1);
+  cursor: pointer;
+  transform: scale(1.05);
+}
 
-/* -------------------------------------------TESTE--------------------------------------- */
+
+/* -------------------------------------------cards--------------------------------------- */
 
 .materia {
     margin-bottom: 60px;
@@ -311,5 +323,22 @@ h2{
       font-size: 14px;
     }
   }
+  /* ---------------------------------- */
+  .emoji-trail {
+    position: absolute;
+    /* Garante que os emojis não interfiram com cliques em outros elementos */
+    pointer-events: none; 
+    font-size: 24px; /* Ajuste o tamanho do emoji conforme necessário */
+    transform: translate(-50%, -50%); /* Centraliza o emoji no ponto do cursor */
+    opacity: 1;
+    transition: opacity 0.5s ease-out, transform 0.3s ease; /* Adiciona um efeito de fade/escala */
+}
 
+/* Animação para o desaparecimento */
+@keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+}
  
