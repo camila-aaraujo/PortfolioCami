@@ -1,14 +1,13 @@
 
 body {
-  
-    padding: 0;
-    margin:0;
-    width: 100%;
-    overflow-x: hidden;
-    list-style: none;
-    text-decoration: none;
-    background-color: #030814;
-    /* background-color: aliceblue; */
+  padding: 0;
+  margin:0;
+  width: 100%;
+  overflow-x: hidden;
+  list-style: none;
+  text-decoration: none;
+  /* background-color: #030814; */
+  /* background-color: aliceblue; */
 }
 
 
@@ -52,16 +51,34 @@ header{
   color: #fd1852 !important;
   font-weight: bold
 }
+ 
+/* -------------------------------------------------MUDANÇA DE TEMA----------------------------- */
 
-/*  QUANDO PASSAR O CURSOR EM CIMA DO NOMES NO CABEÇALHO MUDAR A COR  */
-/* .cabecalho li a:hover{
-    color: #e62b5a;
-} */
+/* cor do modo claro */
+body.temaClaro {
+  /* background-color: aliceblue;  */
+  background-color: #eee;
+  
+  transition: background-color 0.6s;
+}
 
+/* cor do modo escuro */
+body.temaEscuro {
+  background-color: #030814;
+  transition: background-color 0.6s;
+}
+
+/* botão do tema */
+.tema-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
 /* -----------------------------------------------TITULO----------------------------------------- */
 .titulo{
-    align-items: center;
+  align-items: center;
 }
 
 /* TITULO PRINCIPAL */
@@ -112,20 +129,20 @@ h2{
 
 /* DIVIDIR EM DUAS COLUUNAS O SOBRE MIM */
 .sobremim{
-    display: flex;
-    width: 99%;
-    justify-content: space-around;
-    align-items: start; /* alinha ao topo */
-    gap: 40px; /* Espaçamento entre colunas */
-    color: #d883a8;
+  display: flex;
+  width: 99%;
+  justify-content: space-around;
+  align-items: start; /* alinha ao topo */
+  gap: 40px; /* Espaçamento entre colunas */
+  color: #d883a8;
 }
 
 /* SÓ O TEXTO SOBRE MIM */
 .sobremim p {
-    font-size: 16px; /* Tamanho da fonte */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    text-align: justify; /* Justifica o texto */
-    margin: 0; /* Remove margens */
+  font-size: 16px; /* Tamanho da fonte */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  text-align: justify; /* Justifica o texto */
+  margin: 0; /* Remove margens */
 }
 
 
@@ -323,7 +340,9 @@ h2{
       font-size: 14px;
     }
   }
-  /* ---------------------------------- */
+
+
+/* ---------------------------trilha de emojis-------------------- */
   .emoji-trail {
     position: absolute;
     /* Garante que os emojis não interfiram com cliques em outros elementos */
@@ -342,3 +361,33 @@ h2{
     }
 }
  
+/* -------------------------------CARROSSEL------------------------- */
+.carrossel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10%;
+  padding-bottom: 10%;
+}
+
+.container-img {
+  width: 300px;      /* largura fixa */
+  height: 400px;     /* altura fixa */
+  overflow: hidden;  /* corta o que passar */
+}
+
+.container-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* mantém proporção sem distorcer */
+  
+}
+.seta {
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #d98ca7;
+  background-color: #c8637d;
+  align-content: center;
+}
+

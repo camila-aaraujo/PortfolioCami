@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Técnico</title>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js" ></script>
-    <link rel="stylesheet" href="modeEscuro.css">
+
 </head>
 <body>
     <header>
@@ -16,9 +15,7 @@
           <li><a class="tela-atual" href='tecnico.html'>Técnico</a></li>  
           <li><a href='em.html'>Ensino Médio</a></li>
           <li><a href="certificado.html">Certificados</a></li>
-          <div>
-            <!-- <button class="btn">escuro</button> -->
-          </div>
+          <li> <button id="temaBotao" class="tema-btn">☀️</button></li>
         </ul>
     </header>
 
@@ -29,7 +26,7 @@
         <div class="trimestres">
           <button onclick="mostrarAtividades('cards-modelagem', 1)">1º Trimestre</button>
           <button onclick="mostrarAtividades('cards-modelagem', 2)">2º Trimestre</button>
-          <button onclick="mostrarAtividades('cards-modelagem', 3)">3º Trimestre</button>
+          <!-- <button onclick="mostrarAtividades('cards-modelagem', 3)">3º Trimestre</button> -->
         </div>
         <div class="cards" id="cards-modelagem">
     
@@ -63,59 +60,26 @@
             <div class="habilidades">H1 a H7</div>
           <a href="https://www.figma.com/design/uG9zOBpLyHdLRrpyMeaCOx/S.A-Tempfy?node-id=0-1&t=jYzYg9mAuJKpPvNA-1">Link da atividade</a>
           </div>
-          <div class="card trimestre-3">
+          <!-- <div class="card trimestre-3">
             <div class="titulo">Estatística</div>
             <div class="descricao">Gráficos e tabelas.</div>
-          </div>
-        </div>
-    </div>
-
-    <div class="materia">
-        <h2>IOT</h2>
-        <div class="trimestres">
-          <button onclick="mostrarAtividades('cards-iot', 1)">1º Trimestre</button>
-          <button onclick="mostrarAtividades('cards-iot', 2)">2º Trimestre</button>
-          <button onclick="mostrarAtividades('cards-iot', 3)">3º Trimestre</button>
-        </div>
-        <div class="cards" id="cards-iot">
-            <!-- <div class="card trimestre-1">
-                <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
-                padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-                border-radius: 8px; will-change: transform;">
-                <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-                src="https://www.canva.com/design/DAGlLiOH-14/bc-MPW5Fz5ZCXDfPfnQTaw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-                </iframe>
-                </div>
-                <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGlLiOH-14&#x2F;bc-MPW5Fz5ZCXDfPfnQTaw&#x2F;view?utm_content=DAGlLiOH-14&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a> 
-                <div class="titulo">Sensores</div>
-                <div class="descricao">De acordo com as explicações dadas em aulas, desenvolvemos uma apresentação, em grupo, com todos os sensores.</div>
-                <div class="habilidades"></div>
-                <a href="https://www.canva.com/design/DAGlLiOH-14/B0MnS-C1PcksSo-sHQAizg/edit?utm_content=DAGlLiOH-14&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"> Link da atividade</a>
-            </div> -->
-
-          <!-- <div class="card trimestre-2">
-            <div class="titulo">Inglês</div>
-            <div class="descricao">Verbos e tempos.</div>
-          </div>
-          <div class="card trimestre-3">
-            <div class="titulo">Literatura</div>
-            <div class="descricao">Modernismo.</div>
           </div>
         </div> -->
     </div>
 
+
     <div class="materia">
         <h2>Banco de Dados</h2>
         <div class="trimestres">
-          <button onclick="mostrarAtividades('cards-bd', 1)">1º Trimestre</button>
+          <!-- <button onclick="mostrarAtividades('cards-bd', 1)">1º Trimestre</button> -->
           <button onclick="mostrarAtividades('cards-bd', 2)">2º Trimestre</button>
-          <button onclick="mostrarAtividades('cards-bd', 3)">3º Trimestre</button>
+          <button onclick="mostrarAtividades('cards-bd', 3)">3º Trimestre</button> 
         </div>
-        < <div class="cards" id="cards-bd">
+         <div class="cards" id="cards-bd">
           <div class="card trimestre-1">
             <div class="titulo">Português</div>
             <div class="descricao">Funções da linguagem.</div>
-          </div>
+          </div> 
 
           <div class="card trimestre-2">
             <iframe src="https://docs.google.com/document/d/e/2PACX-1vSmQVlSIJTLBW6ko5iiRtGgd0Y2klHg1YyJSi0fc3RS1AYs7txZPd36qo02SpQ58c1-rs2Zmdoal_vC/pub?embedded=true"></iframe>
@@ -126,10 +90,10 @@
             <a href="https://docs.google.com/document/d/1uMFzYQT3xim5vRkWT81d419WS26VGi-nb0C6Qy21bdI/edit?usp=sharing">Link da atividade</a>
           </div>
           <div class="card trimestre-3">
-            <div class="titulo">Literatura</div>
-            <div class="descricao">Modernismo.</div>
+            <div class="titulo">Situação de Aprendisagem (S.A)</div>
           </div> 
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificados</title>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js" ></script>
-    <link rel="stylesheet" href="modeEscuro.css">
 </head>
 <body>
     <header>
@@ -16,13 +14,51 @@
           <li><a href='tecnico.html'>Técnico</a></li>  
           <li><a href='em.html'>Ensino Médio</a></li>
           <li><a class="tela-atual" href="certificado.html">Certificados</a></li>
-          <div>
-            <!-- <button class="btn">escuro</button> -->
-          </div>
+          <li> <button id="temaBotao" class="tema-btn">☀️</button></li>
+
         </ul>
     </header>
 
     <h1>Certificados</h1>
+    <div class="sobremim">
+      <div class="lado-esquerdo"> 
+        <div class="carrossel" id="carrossel2">
+          <button class="seta esquerda" onclick="mudarSlide('carrossel2', -1)">&#10094;</button>
+          <div class="container-img">
+            <img id="foto-carrossel2" src="">
+          </div>
+          <button class="seta direita" onclick="mudarSlide('carrossel2', 1)">&#10095;</button>
+        </div>
+      </div>
+
+      <div class="lado-direito">
+        <h3 style="font-size: 30px;">SiEM</h3>
+        <p> SiEM (Simulação de Organizações Internacionais para Ensino Médio) é um projeto de extensão da Universidade Federal de Santa Catarina (UFSC) que simula reuniões de organizações como a ONU, onde estudantes do ensino médio representam diplomatas para debater questões globais. Participei representando o Exército Nacional Sírio. Foi uma das melhores experiências do meu ano, um projeto e evento muito enriquecedor que me agregou diversos conhecimentos sobre geopolítica, além de aumentar meu repertório e conhecimento sobre conflitos que acontecem e são discutidos no mundo. Agradeço muito aos meus professores de Humanas, Lucas Flor e Marcus Mattos, por proporcionarem essa experiência.</p>
+      </div>
+    </div>
    
+    <div class="sobremim">
+      <div class="lado-esquerdo"> 
+        <div class="carrossel" id="carrossel3">
+          <button class="seta esquerda" onclick="mudarSlide('carrossel3', -1)">&#10094;</button>
+          <div class="container-img">
+            <img id="foto-carrossel3" src="">
+          </div>
+          <button class="seta direita" onclick="mudarSlide('carrossel3', 1)">&#10095;</button>
+        </div>
+      </div>
+
+      <div class="lado-direito">
+        <h3 style="font-size: 30px;">Festivel de vídeos digitais e educação matemática</h3>
+        <p style="padding-bottom: 10%;">O Festival é uma iniciativa do projeto “Vídeos Digitais na Licenciatura em Matemática a Distância”, coordenado pelo professor Dr. Marcelo de Carvalho Borba. Esse evento conta com o importante apoio da Sociedade Brasileira de Educação Matemática - SBEM e da agência de fomento CNPq. Eu e meu grupo desenvolvemos um jogo de cartas em sala de aula, fundamentado em conceitos matemáticos como probabilidade e contagem. O vídeo de apresentação do projeto obteve excelente qualidade e foi inscrito pelo nosso professor, Waldinei Rosa, na categoria geral do festival. Graças a isso, pudemos viajar até Campo Grande, capital do Mato Grosso do Sul. Essa foi, sem dúvida, a melhor experiência do ano. Tivemos uma viagem de quatro dias, durante os quais visitamos o Bioparque Pantanal, assistimos a palestras interessantes sobre a história do festival e participamos de uma oficina de holograma. Além disso, o contato com uma região do Brasil tão distinta da nossa foi extremamente enriquecedor. Consegui identificar características marcantes do Pantanal, o que foi gratificante, dado o meu grande interesse por Geografia.
+           Foi uma imersão muito positiva e sinto-me muito grato por ter tido essa oportunidade.</p>
+      </div>
+ 
+    </div>
+  
+  
+ 
+
+  <script src="index.js" ></script>
 </body>
 </html>

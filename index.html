@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="modeEscuro.css">
-    
     <title>Portfolio</title>
 </head>
 
@@ -19,9 +16,7 @@
           <li><a href='tecnico.html'>Técnico</a></li>  
           <li><a href='em.html'>Ensino Médio</a></li>
           <li><a href="certificado.html">Certificados</a></li> 
-          <div>
-         <!-- <button class="btn">escuro</button> -->
-         </div>
+          <li> <button id="temaBotao" class="tema-btn">☀️</button></li>
         </ul>
     </header>
    
@@ -34,18 +29,25 @@
 
     <section class="sobremim">
         <div class="lado-esquerdo"> 
-            <img src="imagens/fotosobremim.png" alt="foto minha">
+            <div class="carrossel" id="carrossel1">
+                <button class="seta esquerda" onclick="mudarSlide('carrossel1', -1)">&#10094;</button>
+                <div class="container-img">
+                    <img id="foto-carrossel1" src="">
+                </div>
+                <button class="seta direita" onclick="mudarSlide('carrossel1', 1)">&#10095;</button>
+            </div>
+            
         </div>
        
         <div class="lado-direito"> 
             <p> Meu nome é Camila Araújo, tenho 17 anos e atualmente estou cursando o 3º ano do ensino médio técnico em Desenvolvimento de Sistemas no SESI SENAI de Florianópolis. Sempre gostei de experimentar coisas novas e nunca tive um interesse definitivo em uma área específica, exceto em filosofia e matemática. Por isso, decidi fazer o curso técnico para aprender mais sobre essa área e descobrir se realmente me interesso por ela. Desde muito nova, fui apresentada ao mundo da edição por meu tio, o que me despertou um grande interesse. Continuei me aprofundando, pesquisando mais sobre design e propaganda. Embora ainda esteja explorando outras áreas, agora meu foco está mais voltado para design e programação. Além disso, mantenho como segunda opção meus interesses anteriores ao ensino médio, considerando cursos em psicologia e engenharia civil. </p>
             <div class="redesSociais">
                
-                <img onclick="irParaGithub()" src="imagens/github.svg">
+                <img onclick="irParaGithub()" src="imagens/github.png">
                
-                <img onclick="irParaInsta()" src="imagens/instagram.svg" alt="">
+                <img onclick="irParaInsta()" src="imagens/intagram.png" alt="">
     
-                <img onclick="irParaLink()" src="imagens/linkedin.svg" alt="">    
+                <img onclick="irParaLink()" src="imagens/linkedin.png" alt="">    
             </div>
         </div> 
 
@@ -70,10 +72,7 @@
 
         </div>
     </div>
-     
-  
-   
-  
+    <script src="index.js"></script>
           
 </body>
 </html>

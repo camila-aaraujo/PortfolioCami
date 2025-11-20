@@ -7,7 +7,7 @@ function irParaInsta() {
     window.open("https://www.instagram.com/cami.aaraujo/?next=%2F",);
 }
 function irParaLink() {
-    window.open("https://github.com/camila-aaraujo",);
+    window.open("https://www.linkedin.com/in/camila-araújo-a149b9325?utm_source=share_via&utm_content=profile&utm_medium=member_android");
 }
 
 // FUNCTION PARA PORTFOLIOS ANTIGOS
@@ -22,17 +22,6 @@ function irParaCurriculo(){
     window.open("https://www.canva.com/design/DAFuzJL7zQ8/iplRaHKCarYLhZNWLpjebQ/edit",);
 }
 
-// ---------------------------------------TESTE-=------------------------------------
-// function toggleAtividades(id) {
-//     const atividades = document.getElementsByClassName("atividades");
-//     for (let i = 0; i < atividades.length; i++) {
-//         if (atividades[i].id === id) {
-//             atividades[i].style.display = atividades[i].style.display === "none" ? "block" : "none"; // Alterna a exibição
-//         } else {
-//             atividades[i].style.display = "none"; // Esconde as outras
-//         }
-//     }
-// }
 
 // Guarda o trimestre ativo por container
 const trimestresAtivos = {};
@@ -61,6 +50,23 @@ function mostrarAtividades(containerId, trimestre) {
 }
 
 // ----------------------------------tema escuro e claro--------------
+const body = document.body; //seleciona o elemneto bosy, onde coloquei as classes dos temas
+const btn = document.getElementById("temaBotao"); // seleciona o botão que vai alternar o tema
+
+// modo claro por padrão
+body.classList.add("temaClaro"); 
+
+btn.addEventListener("click", () => {  // quando clicar no botão, alterna entre claro e escuro
+    body.classList.toggle("temaEscuro");
+    body.classList.toggle("temaClaro");
+
+    if (body.classList.contains("temaEscuro")) { //se tiver modo escuro o emoji vai ser de lua, se não o de sol
+        btn.textContent = "🌙";
+    } else {
+        btn.textContent = "☀️";
+    }
+});
+
 
 // -----------------------emojis---------------------------
 // Array de emojis para o rastro
@@ -97,4 +103,59 @@ document.addEventListener("mousemove", (e) => {
     }, 50);
 });
 
+// ------------------------------------CARROSSEL------------------
+// Índice de cada carrossel
+const galeria = {
+    carrossel1: [
+        "imagens/eu1.jpg",
+        "imagens/eu2.jpg",
+        "imagens/eu3.jpg"
+    ],
+    carrossel2: [
+        "imagens/siem.jpg",
+        "imagens/siem3.png"
 
+    ],
+    carrossel3: [
+        "imagens/mtm1.jpg",
+        "imagens/mtm2.jpg",
+        "imagens/mtm3.jpg",
+        "imagens/mtm4.jpg",
+        "imagens/mtm5.jpg",
+        "imagens/mtm6.jpg"
+
+    ]
+};
+
+// Índice de cada carrossel
+const indice = {
+    carrossel1: 0,
+    carrossel2: 0,
+    carrossel3: 0
+};
+
+function mudarSlide(id, direcao) {
+    const fotos = galeria[id];
+    const img = document.getElementById("foto-" + id);
+
+    indice[id] += direcao;
+
+    // loop infinito
+    if (indice[id] < 0) indice[id] = fotos.length - 1;
+    if (indice[id] >= fotos.length) indice[id] = 0;
+
+    img.src = fotos[indice[id]];
+}
+
+// Inicializa a primeira imagem de cada carrossel
+document.addEventListener("DOMContentLoaded", () => {
+    for (let id in galeria) {
+        const img = document.getElementById("foto-" + id);
+
+        if (img) {
+            img.src = galeria[id][0]; // primeira imagem
+        }
+
+        indice[id] = 0; // sempre começa no início
+    }
+});
